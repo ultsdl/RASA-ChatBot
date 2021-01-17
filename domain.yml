@@ -1,0 +1,51 @@
+intents:
+  - greet
+  - ask_population
+  - ask_properties
+  - ask_properties_category
+  - contact_developer
+  - db_details
+  - ask_property_count
+  - ask_ratio
+  - ask_taxation
+
+entities:
+  - feature
+  - query_type
+  - category
+  - flag
+
+forms:
+  - contact_dev_form
+
+slots:
+  concern:
+    type: unfeaturized
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+  utter_thanks:
+  - text: "Thank you for your concern"
+  utter_ask_concern:
+  - text: "Please enter your feedback"
+  utter_sorry:
+  - text: "The requested query cannot be processed. Sorry for the inconvenience."
+  
+
+actions:
+  - action_population
+  - action_properties
+  - action_properties_category
+  - utter_greet
+  - utter_thanks
+  - action_sql_query
+  - action_count_plot
+  - action_property_count
+  - action_feature_ratio
+  - action_taxation
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
